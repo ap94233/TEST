@@ -5,20 +5,21 @@
     <title>6/6 活動頁面</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
-        body { 
+        html, body { 
             margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
+            padding: 0; 
             background: #ffffff; 
-            overflow: hidden;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        body { 
+            display: block; 
         }
         img { 
-            max-width: 90%; 
-            max-height: 90vh; 
-            object-fit: contain;
-            box-shadow: 0 4px 15px rgba(0,0,0,0); /* 加一點淡淡的陰影，看起來更專業 */
+            display: block; 
+            width: 100%; 
+            height: auto; 
+            margin: 0; 
         }
     </style>
 </head>
@@ -26,6 +27,7 @@
     <img id="myImage" src="">
 
     <script>
+        // 破解快取程式碼，保證換圖能立刻顯示
         var timestamp = new Date().getTime();
         document.getElementById('myImage').src = "cat.png?t=" + timestamp;
     </script>

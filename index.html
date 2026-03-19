@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>6/6 活動頁面</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         body { 
             margin: 0; 
             display: flex; 
             justify-content: center; 
-            align-items: flex-start; /* 讓圖片從頂部開始排 */
-            min-height: 100vh; 
-            background: #ffffff; /* 這裡改成了白色 */
+            align-items: center; 
+            height: 100vh; 
+            background: #ffffff; 
+            overflow: hidden;
         }
         img { 
-            max-width: 100%; 
-            height: auto; 
+            max-width: 90%; 
+            max-height: 90vh; 
+            object-fit: contain;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* 加一點淡淡的陰影，看起來更專業 */
         }
     </style>
 </head>
@@ -24,7 +27,6 @@
 
     <script>
         var timestamp = new Date().getTime();
-        // 這裡會自動幫你的 cat.png 加上時間戳，保證 6/6 當天換圖大家都能立刻看到
         document.getElementById('myImage').src = "cat.png?t=" + timestamp;
     </script>
 </body>
